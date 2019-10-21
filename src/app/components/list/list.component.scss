@@ -1,0 +1,43 @@
+@import '../../common/styles/theme.style';
+
+ul {
+  padding: 0;
+  margin: 0 0 2em 0;
+
+  li {
+    list-style: none;
+    color: $font-color-dark;
+
+    &:not(:last-child) {
+      margin-bottom: .5em;
+    }
+
+    &:after {
+      clear: both;
+    }
+
+    & > input[type=checkbox],
+    & > input[type=checkbox] + label {
+      float: left;
+    }
+
+    & > input[type=checkbox] {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    & > input[type=checkbox] + label {
+      cursor: pointer;
+    }
+
+    & > input[type=checkbox] + label + a {
+      margin-left: 5px;
+    }
+
+    .done-true {
+      text-decoration: line-through;
+      color: $font-color;
+      font-style: italic;
+    }
+  }
+}

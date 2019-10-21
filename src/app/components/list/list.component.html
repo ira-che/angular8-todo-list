@@ -1,0 +1,7 @@
+ <ul>
+    <li *ngFor="let todo of todos | filter : searchText; let i = index">
+      <input id="checkbox-{{i}}" type="checkbox" [checked]="todo.done" [(ngModel)]="todo.done" (change)="onChange()"/>
+      <label for="checkbox-{{i}}" class="done-{{todo.done}}">{{todo.text}}</label>
+      <a href="#" (click)="remove(i)">[remove]</a>
+    </li>
+  </ul>

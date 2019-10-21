@@ -1,0 +1,15 @@
+@import '../../common/styles/theme.style';
+
+h2 {
+  color: $font-color-dark;
+}
+
+a {
+  color: $primary-dark;
+
+  &:active,
+  &:hover {
+    color: $primary;
+  }
+}
+

@@ -1,0 +1,32 @@
+@import 'colors';
+
+@mixin prime-font {
+  color: $font-color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: 400;
+  font-style: italic;
+}; 
+
+wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: block;
+  @include prime-font;
+  transform: translate(-50%, -50%);
+
+  ::ng-deep input[type=text],
+  ::ng-deep input[type=search] {
+    padding: .4em .2em;
+    outline: 0;
+    border: 1px solid $primary;
+    border-radius: 3px;
+
+    &:hover,
+    &:focus {
+      border-color: $primary-dark;
+    }
+  }
+}
